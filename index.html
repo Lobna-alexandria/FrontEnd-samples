@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+<link  rel="stylesheet"  href="css/all.css">
+<link   rel="stylesheet" href="css/animate.min.css" /> 
+
+<link   rel="stylesheet"  href="css/hover.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<link   rel="stylesheet"  href="css/bootstrap.css" />
+<link   rel="stylesheet"  href="css/bootstrap.js" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+<style>
+/* Center the loader */
+
+.progress_container_load{transition: all 1.5s;}
+
+.progress-value_load {
+  animation: load 1.5s normal forwards;
+   
+}
+
+
+.progress.prload{
+
+  display: flex;
+  height:20px;
+  overflow: hidden;
+  font-size: 0.75rem;
+  background-color: #e9ecef;
+  border-radius: 15px;
+
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 5px 23px 11px rgba(255,238,74,0.81); 
+box-shadow: 0px 10px 13px -7px #000000, 0px 5px 23px 11px rgba(255,238,74,0.81);}
+
+.progress-bar.prload{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #0d6efd;
+  transition: width 0.6s ease;
+}
+.progress.prload:before,
+.progress.prload:after{display: none;}
+
+
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+/*-------------------------------------------------------------------------------*/
+
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+body{background-color: gray;}
+/**{border: solid;}*/
+
+     .fixed_icon{position: fixed;
+   z-index: 100;
+  height: 60px;
+width: 60px;
+border-radius: 50%;
+right:20px;opacity: .5;
+top: 630px;background: #B5CEA4;
+background-color:rgba(189, 103, 103, 0.39)!important;
+
+-webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 0px 0px 18px 5px rgba(238,239,232,0); 
+box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 0px 0px 18px 5px rgba(238,239,232,0);}
+
+.fixed_icon a{color: white;
+    font-size:30px;opacity: 1 !important;}
+
+.header1{background-image: url(photos/6.jpg);
+background-attachment: fixed;
+background-size: cover;
+background-position: center;
+}
+
+#nav1{ background-color:rgba(189, 103, 103, 0.39)!important;}
+#nav1 a{font-weight:800 ;color: black; }
+
+#nav1 a:hover{color: gold;opacity: 1 !important;}
+
+.headerdot h1{font-size: 6vw !important;font-weight: bold;}
+.headerdot.py-5 {
+  padding-top: 18rem !important;
+  padding-bottom: 18rem !important;
+
+}
+
+.span-dot{color: gold;}
+
+.l1.bg-transparent {
+  background-color:rgba(189, 103, 103, 0.39)!important;
+ 
+}
+a.l2:hover{background-color: slateblue !important;}
+
+/*----------------------------------------------------Media-Q-----------------------------------------------------*/
+@media (max-width: 767.98px)
+
+ {
+   body{margin: 0;}
+  #nav1{background-color: rgba(150, 139, 224, 0.39) !important;
+    margin-left: 0;padding-left: 0;
+   }
+
+.logo1{position: absolute;}/*علشان يختفي و النجمه تاخد العرض كله يس*/
+
+  #navbarNavAltMarkup{
+  animation: fadeInLeft;
+  animation-duration: 1.5s;
+  margin-top: 60px;
+  
+ }
+
+#navbarTogglerDemo03{ 
+margin-top: 0;/*اخد pos -fixed عشان اعرف اديله توب صفر و يقف فوق الشاشه فى حذا اللوجو*/}
+
+#navbarTogglerDemo03 a{border-top: solid ;
+  text-align: center;margin: 0;
+  width: 96vw;padding-right: 0;right:0;position: relative; }/*اللينكات نفسها*/
+  
+
+ .carousel-inner p{width:100vw !important;}
+
+ .teamCard{padding-top: 3rem;}
+
+ .contact-row{float: left;}
+
+ /*.tableFooter{margin-left:5px;}*/
+}
+
+
+/*-------------------------------------------------------------------------------------------------end media*/
+
+.progress{
+    height:10px;
+    background: #e9e9ea;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    overflow: visible;
+    position: relative;
+}
+.progress:before,
+.progress:after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    z-index: 1;
+}
+.progress:after{
+    border: 7px solid #e9e9ea;
+    left: auto;
+    right: 0;
+}
+.progress .progress-bar{
+    box-shadow: none;
+    border: none;
+    border-radius: 15px;
+    
+   }
+
+.progress.orange:before{ border: 7px solid #df8484; }
+.progress.blue:before{ border: 7px solid #dfe210; }
+.progress.green:before{ border: 7px solid #53aa2c; }
+.progress.purple:before{ border: 7px solid #45b829; }
+
+.progress.orange .progress-value{
+    border: 5px solid #fe3b3b;
+    color: #fe3b3b;  width: 60px;
+    height:40px;
+    line-height: 27px;
+    border-radius: 20px;
+    background: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    position: absolute;
+    top: -12px;left: 50%;
+    /*right: 0;*/
+    z-index: 2;
+
+}
+.progress.blue .progress-value{
+    border: 5px solid #1a4966;
+    color: #1a4966;
+
+    width: 60px;
+    height:40px;
+    line-height: 27px;
+    border-radius: 20px;
+    background: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    position: absolute;
+    top: -12px;left: 70%;
+    /*right: 0;*/
+    z-index: 2;
+
+}
+
+.progress.purple .progress-value{
+    border: 5px solid #66406f;
+    color: #66406f;
+    width: 60px;
+    height:40px;
+    line-height: 27px;
+    border-radius: 20px;
+    background: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    position: absolute;
+    top: -12px;left: 75%;
+    /*right: 0;*/
+    z-index: 2;
+}
+@-webkit-keyframes animate-positive{
+    0%{ width: 0; }
+}
+@keyframes animate-positive{
+    0%{ width: 0; }
+}
+
+.h3 {color: #545454;
+    font-size: 60px;
+    line-height: 38px;
+    font-weight: 700;
+   text-align: center;
+}
+
+a img:hover{opacity: .5;transition: .3s;}
+
+.carousel-item img{border-radius: 50%;width: 100px ;height: 100px;}
+
+.carousel-inner p{background-color: rgb(106, 77, 138);
+ /* margin-right: 13rem !important;
+  margin-left: 13rem !important;*/
+ 
+}
+
+#carouselExampleDark button {width: 12px;
+    height: 12px;
+    padding: 0;
+    background-color: #fff;
+    margin: 0 7.5px;
+    display: inline-block;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    border-radius: 50%;
+    border: 1px solid white;}
+
+
+
+#carouselExampleDark button:hover{background-color: rgb(94, 85, 155);}
+#carouselExampleDark button:focus{background-color: yellow;}
+
+
+.after{content: ""; /*المثلث البنفسجي الصغير اسفل النص*/
+    width: 0;
+    height: 0;
+    margin-right: auto;
+    margin-left: auto;
+    border-style: solid;
+    border-width: 19px 18px 0;
+    border-color: #6a4d8a transparent transparent transparent;
+    position: relative;
+    right: 0;
+    top:-1rem;
+    left: 0;
+}
+
+
+button#blog:hover{background-color: purple !important;color: #000;}
+
+.card-title:hover{color: gold;transition: 0.5s;}
+
+.card small:hover{color: rgb(94, 85, 155);}
+
+.card { 
+  display: table; 
+   /*خلا كل كارت طوله على اد الكلام*/
+  }
+
+  .teamCard h6 {color: #5e5e5e;font-size: 20px;
+     line-height: 24px;
+     font-weight: 700;}
+
+.teamCard .p2{width: 100%;
+   margin: 0 0 10px;
+   color: #8c9597;
+   line-height: 25px;}
+   .p2 a{text-decoration: none;}
+   .p2 a:hover{text-decoration:underline;}
+
+
+  .teamCard i{border-radius: 50%;border:1px solid;height: 30px; width: 30px;}
+.contact a{color:#5e5e5e;}
+
+small .cfoot:hover{color: violet;}/*لم تعمل*/
+
+.tableFooter a{text-decoration: none;font-size: 13px;color: gray; text-align: left;border: none;}
+
+.tableFooter a:hover{color: purple;}
+
+.tableFooter i{padding-right: 0.5rem;}
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.1rem .5rem 0.1rem;
+
+}
+
+
+</style>
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+
+    <div id="loader" class="progress_container_load mt-5  w-50 mx-auto ">
+      
+        <div class="progress prload  px-0 bg-light"> 
+         <div class="progress-bar prload bg-warning progress-value_load" role="progressbar" style="width: load" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0">
+        </div>
+       </div>
+       <h1 style="text-shadow: 2px 2px 2px #CEC189;">Please Wait...</h1>
+    </div>
+
+
+<div style="display:none !important;" id="myDiv" class="animate-bottom">
+ 
+ 
+    <section class="header1 w-100">
+        <div class="fixed_icon align-middle text-center hvr-pop" ><a href="#nav1"><i class="fas fa-angle-double-up" ></i></a></div>
+
+        <nav id="nav1" class="navbar navbar-expand-md sticky-nav1  container-fluid shadow " >
+         
+            <div class="row  py-2 w-100 illdy ">
+      
+              <div class=" col py-sm-1  logo1  row"> 
+               
+              <span class="fs-1  hvr-pulse offset-1 col-6  " style="font-family: 'Lobster', cursive; ">illdy <i class="fas fa-feather-alt"></i></span>
+             </div>
+      
+      
+      
+             <div class=" col navbar-collapse " id="navbarTogglerDemo03" >
+               
+            <div  class="navbar-toggler w-100 text-end " data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" 
+              aria-label="Toggle navigation" style="cursor:pointer;color: rgb(60, 21, 77);">
+
+              <span class="far fa-star hvr-pop fs-5 text-right">Menu</span>
+             </div>
+      
+            <div class="collapse navbar-collapse  " id="navbarNavAltMarkup">
+            
+               
+                           <a id="a-about" href="#about" class="  nav-link  px-sm-3 ">About</a>
+                           <a href="#Portfolio" class="  nav-link    px-sm-3">Portfolio</a>
+                           
+                           <a href="#Services" class="  nav-link    px-sm-3 ">Services</a>
+      
+                           <a href="#Blog" class="  nav-link     px-sm-3 ">Blog</a>
+                           <a href="#OurTeam" class="  nav-link   px-sm-3 text-nowrap">Our Team</a>
+                           <a href="#Contact" class="  nav-link   px-sm-3 text-nowrap">Contact Us</a>
+      
+      
+            </div>
+
+            
+          </div>
+        </nav>
+      
+  
+
+<div class=" headerdot container text-center align-middle py-5  ">
+<div class="row" style="color: black;"> 
+  
+  <h1  class="col-12  position-relative" >Clean<span class="span-dot">.</span>Slick<span class="span-dot">.</span>Pixel Perfect</h1>
+
+  <h6 class=" col-12 w-75 text-center mx-auto ">  lldy is a great one-page theme, perfect for developers and designers but also for 
+    someone who just wants a new website for his business. Try it now!</h6>
+
+    
+  
+
+  <div class="justify-content-center">
+    <a href="" class="l1 btn  me-md-2 px-5 fs-5 py-3 text-nowrap text-white bg-transparent border border-2"type="button" style="border-radius: 4px;" > Learn More</a>
+    <a href="" class="l2 btn  me-md-2 px-5 fs-5 py-3 text-white" type="button" style="border-radius: 4px;background-color: gold;" >Download</a>
+  </div>
+
+
+</div></div>
+
+
+    </section>
+
+<section class="about py-5 bg-white">
+<div class="container ">
+  <div class="row d-flex justify-content-center">
+
+  <h3 class="h3 py-5">About</h3>
+<p class="px-5 text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel quod cum harum nostrum odit. Dolorum odio ipsa, quasi quo repellat tempore praesentium, quisquam mollitia recusandae sint et id, aperiam debitis!</p>
+
+
+
+<div class="container ">
+  <div class="row py-5">
+      <div class="col-12 col-md-4 ">
+          
+          <div class="progress orange">
+              <div class="progress-bar bg-danger" style="width:60%;">
+                  <div class="progress-value">60%</div>
+              </div>
+  
+          </div>
+          <h6 class="progress-title py-4 text-danger"><i class="fas fa-font "></i>  Typography</h6>
+        </div>
+
+        <div class="col-12 col-md-4">
+          
+          <div class="progress blue">
+              <div class="progress-bar bg-warning " style="width:82%; ">
+                  <div class="progress-value">82%</div>
+              </div>
+          </div>
+          <h5 class="progress-title py-4 text-warning"> <i class="fas fa-pen"></i> Design</h5>
+        </div>
+
+          <div class="col-12 col-md-4">
+           
+            <div class="progress purple">
+                <div class="progress-bar bg-success" style="width:87%; ">
+                    <div class="progress-value">87%</div>
+                </div>
+            </div>
+            <h5 class="progress-title py-4 text-success"> <i class="fas fa-code"></i> Development</h5>
+  </div>
+  
+</div>
+
+
+</div></div>
+</section>
+
+<!--  ---------------------------Projects----------------------------------------------->
+<section class="projects  bg-light  " style="background-image:url(photos/background-repeat.webp) ;">
+  <div class="container-fluid ">
+   
+    <div class ="py-5">
+<h3 class="h3 py-2">Projects</h3>
+<p class="px-5 text-center fs-5" style="color: gray;">You'll love our work. Check it out!</p> 
+</div>
+
+<div class="row ">
+
+<div class="col-6 col-md-3   m-0 p-0"> <a href=""><img class="w-100 h-100" src="photos/5.jpg"></a></div>
+<div class="col-6 col-md-3   m-0 p-0"> <a href=""><img class="w-100 h-100" src="photos/2.jpg"></a></div>
+<div class="col-6 col-md-3   m-0 p-0"> <a href=""><img class="w-100 h-100" src="photos/4.jpg"></a></div>
+<div class="col-6 col-md-3   m-0 p-0"> <a href=""><img class="w-100 h-100" src="photos/45.jpg"></a></div>
+
+  </div></div>
+</section>
+
+
+<!--  ---------------------------Testimonials-----Slider----------------------------------------------->
+
+<section class="about  bg-light py-5 m-0" style="background-image:url(photos/testimonial.jpg) ;">
+  <div class="container-fluid ">
+   
+    
+<h2 class=" py-1 text-center " style="color: white;font-weight: 700;">Testimonials</h2>
+
+
+<div class="row  ">
+
+  <div id="carouselExampleDark" class="carousel carousel-dark slide py-3 position-relative" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button  data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button  data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button  data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button  data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 3"></button>
+
+
+    </div>
+
+    <div class="carousel-inner mx-auto py-4">
+      
+
+      <div class="carousel-item active " data-bs-interval="10000">
+        
+        <img src="photos/person1.jpg" class="align-top mx-auto d-block py-1 " alt="..." >
+       
+           <div class=" py-1 text-white ">
+            
+               <p class="py-3 px-5 text-center  w-50 mx-auto"  >
+                Lorem, ipsum dol
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                   
+                 fugit iusto ev  eniet quasi. In repudiandae ea impedit vitae reiciendis.
+                 incidunt neque laudantium fugit? Odit hic dignissimos qui nulla fugit iusto ev  eniet quasi. In repudiandae ea impedit vitae reiciendis.
+              </p>
+               <div class="after py-0 m-0 mx-auto" ></div><!--the Purple rectangle-->
+            <h5 class="py-2 text-center">Mike Muller</h5>
+        </div> 
+      </div>
+     
+      
+      <div class="carousel-item  ">
+        <img src="photos/person2.jpg" class="align-top mx-auto d-block py-1 " alt="..." >
+       
+           <div class="  py-1 mx-auto  text-white">
+
+            <p class="py-3 px-5 text-center  w-50 mx-auto"  >
+                                   
+                 Eos maiores inventore, incidunt neque laudantium fugit? Odit hic dignissimos qui nulla
+                 fugit iusto ev  eniet quasi. In repudiandae ea impedit vitae reiciendis.
+                 incidunt neque laudantium fugit? Odit hic dignissimos qui nulla fugit iusto ev  eniet quasi. In repudiandae ea impedit vitae reiciendis.</p>
+                 <div class="after py-0 m-0 mx-auto" ></div><!--the Purple rectangle-->
+
+            <h5 class="py-2 text-center">John Doe</h5>
+        </div>
+      </div>
+
+      <div class="carousel-item  ">
+        <img src="photos/person3.jpg" class="align-top mx-auto d-block py-1 " alt="..." >
+       
+           <div class="  py-1 mx-auto  text-white">
+
+            <p class="py-3 px-5 text-center  w-50 mx-auto"  >
+                 Eos maiores inventore, incidunt neque laudantium fugit? Odit hic dignissimos qui nulla
+                 fugit iusto ev  eniet quasi. In repudiandae ea impedit vitae reiciendis.
+                 incidunt neque laudantium fugit? Odit hic dignissimos qui nulla fugit iusto ev  eniet quasi. In repudiandae ea impedit vitae reiciendis.</p>
+                 <div class="after py-0 m-0 mx-auto" ></div><!--the Purple rectangle-->
+            <h5 class="py-2 text-center">Aigars Silkalns </h5>
+        </div>
+      </div>
+
+      <div class="carousel-item  ">
+        <img src="photos/person4.jpg" class="align-top mx-auto d-block py-1 " alt="..." >
+       
+           <div class="  py-1 mx-auto  text-white">
+
+            <p class="py-3 px-5 text-center  w-50 mx-auto"  >
+                 Eos maiores inventore, incidunt neque laudantium fugit? Odit hic dignissimos qui nulla
+                 fugit iusto ev  eniet quasi. In repudiandae ea impedit vitae reiciendis.
+                 incidunt neque laudantium fugit? Odit hic dignissimos qui nulla fugit iusto ev  eniet quasi. In repudiandae ea impedit vitae reiciendis.</p>
+                 <div class="after py-0 m-0 mx-auto" ></div><!--the Purple rectangle-->
+            <h5 class="py-2 text-center">Jane Smith</h5>
+        </div>
+      </div>
+   
+
+
+
+
+  </div>
+
+  </div></div>
+</section>
+
+<!--  ---------------------------Services----------------------------------------------->
+
+
+<section class="services bg-white py-5" style="background-color: transparent;">
+
+<h1 class=" fs-2 text-center "style="color:#545454;font-size: 35px;
+line-height: 38px;
+font-weight: 700;">Services</h1>
+ <p class="text-center " style="line-height: 26px; font-size: 16px; color: #8c9597;
+ font-family: lato;
+ font-weight: 400;"> In order to help you grow your business, our carefully selected experts can advise you
+  in in the following areas:</p>
+
+
+  <div class="container py-5 px-4 ">
+    <div class="row px-5">
+
+<div class="col-12 col-md-4 text-danger text-center ">
+  <i class="fas fa-pen fs-4 py-2"></i>
+  <h4>Web Design</h4>
+  <p style=" font-size: 16px; color: #8c9597;
+  font-family: lato;
+  font-weight: 400;">Consectetur adipiscing elit. Praesent molestie urna hendrerit erat tincidunt tempus. Aliquam a leo risus. Fusce a metus non 
+    augue dapibus porttitor at in mauris. Pellentesque commodo...</p>
+</div>
+
+<div class="col-12 col-md-4 text-warning text-center">
+  <i class="fas fa-code fs-4 py-2"></i>
+  <h4>Web Development</h4>
+  <p style=" font-size: 16px; color: #8c9597;
+  font-family: lato;
+  font-weight: 400;">Consectetur adipiscing elit. Praesent molestie urna hendrerit erat tincidunt tempus. Aliquam a leo risus. Fusce a metus non 
+    augue dapibus porttitor at in mauris. Pellentesque commodo...</p>
+</div>
+
+
+<div class="col-12 col-md-4 text-center text-success">
+  <i  class="fas fa-search fs-4 py-2" ></i>
+  <h4>SEO Analisys</h4>
+  <p style=" font-size: 16px; color: #8c9597;
+  font-family: lato;
+  font-weight: 400;">Consectetur adipiscing elit. Praesent molestie urna hendrerit erat tincidunt tempus. Aliquam a leo risus. Fusce a metus non 
+    augue dapibus porttitor at in mauris. Pellentesque commodo...</p>
+</div>
+
+
+
+</div>
+</div>
+
+
+
+
+
+</section>
+
+<!--  ---------------------------latest news----------------------------------------------->
+
+<section class="latest py-5 position-relative" style="background-color:#222f36;">
+
+  
+  <h1 class=" fs-2 text-center text-white"style="font-size: 35px;
+  line-height: 38px;
+  font-weight: 700;">Latest News</h1>
+   <p class="text-center " style="line-height: 26px; font-size: 16px; color: #8c9597;
+   font-family: lato;
+   font-weight: 400;"> If you are interested in the latest articles in the industry, take a sneak peek at our blog. You have nothing to loose!</p>
+ 
+ <div class="  d-grid gap-4 d-flex justify-content-center " >
+  <button id="blog" class=" btn bg-warning py-2  px-4 text-white hvr-push "> <i class="fas fa-arrow-circle-right"></i> See blog</button>
+</div>
+
+
+    <div class="container py-5 px-5" >
+     
+  <Div class="row">
+    
+        <div class=" card-group  px-0  " >
+
+          <div class="card col-12   mx-sm-3 px-0 " style="border:none !important;" >
+            <img src="photos/c1.jpg" class="card-img-top w-100" alt="...">
+            <div class="card-body ">
+              <h5 class="card-title text-start ">Card title</h5>
+              <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+           
+              <small class="px-4 text-warning float-start cfoot" ><i class="fas fa-arrow-circle-right py-4"></i> Read more</small>
+           
+          </div>
+
+          <div class="card col-12  mx-sm-3 px-0 " style="border:none !important">
+            <img src="photos/c2.jpg" class="card-img-top w-100" alt="...">
+            <div class="card-body ">
+              <h5 class="card-title text-start">Card title as supporting text below as a ext below as a natural lea </h5>
+              <p class="card-text ">This card has supporting text below as a natural lead-in to additional content.
+                card has supporting text below as a natural lead-in to additional content.
+                supporting text below as a natural lead-in to additional content.
+                card has supporting text below as a natural lead-in to as a natural lead-in to additional content.
+                supporting text below as a natural lead-in to additional content.
+               
+              </p>
+              <small class="px-4 text-warning float-start cfoot" ><i class="fas fa-arrow-circle-right py-4"></i> Read more</small>
+            </div>
+            
+             
+            
+          </div>
+          
+          <div class="card col-12  mx-sm-3 px-0 " style="border:none !important">
+            <img src="photos/c3.jpg" class="card-img-top w-100" alt="...">
+            <div class="card-body ">
+              <h5 class="card-title text-start">Card title</h5>
+              <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            </div>
+           
+              <small class="px-4 text-warning float-start cfoot" ><i class="fas fa-arrow-circle-right py-4"></i> Read more</small>
+            
+          </div>
+        
+  
+                    
+          
+
+  </div></Div>
+  
+
+
+</section>
+
+<!--  ---------------------------statistics----------------------------------------------->
+
+<section class="border p-0" style="background-image: url(photos/treesyellow.jpg);background-position: center;background-size: cover;background-attachment: fixed;">
+
+  
+    
+    <div class="container-fluid my-sm-3" >
+      <div class="row px-5 ">
+  
+  <div class="col-12 col-md-4 text-white text-center border-end" >
+    
+    <h1 style="font-size: 50px; font-weight: 700;">260</h1>
+    <p style=" font-size: 20px; 
+    font-family: lato;
+    font-weight: 400;">PROJECTS</p>
+  </div>
+  
+  <div class="col-12 col-md-4 text-white text-center border-end">
+    <h1 style="font-size: 50px; font-weight: 700;">120</h1>
+    <p style=" font-size: 20px; 
+    font-family: lato;
+    font-weight: 400;">CLIENTS</p>
+  </div>
+  
+  
+  <div class="col-12 col-md-4 text-white text-success text-center">
+    <h1 style="font-size: 50px; font-weight: 700;">260</h1>
+    <p style=" font-size: 20px; 
+    font-family: lato;
+    font-weight: 400;">COFFES</p>
+  </div>
+  
+  
+  
+  </div>
+  </div>
+  
+  
+ 
+  
+  
+  
+  
+  
+  
+  
+  </section>
+
+<!--  ---------------------------Teeeeeeeeeeeeeeeeeeeeeam----------------------------------------------->
+
+<section class="team py-5" style="background-image: url(photos/background-repeat.webp);">
+
+    <div>
+   <h1 class=" fs-2 text-center "style="color:#545454;font-size: 35px;
+line-height: 34px;
+font-weight: 700;">Team</h1>
+ <p class="text-center " style="line-height: 25px; font-size: 14px; color: #8c9597;
+ font-family: lato;
+ font-weight: 400;">  Meet the people that are going to take your business to the next level.</p>
+
+</div>
+
+<div class="container py-5">
+<div class="row mx-auto">
+
+<div class="col-12 col-md-4 row teamCard mx-auto">
+
+   <div class="col-4 "><img src="photos/t1.jpg" style="border-radius: 50%;width: 100%;"></div>
+   <div class="col-8  text-start"><h6>Mark Lawrance</h6>
+
+    <p class="text-danger"> Web Designer</p>
+    
+   <p class="p2"> Creative, detail-oriented, always focused.</p>
+
+<a  class="link text-danger" href=""><i  class="fab fa-facebook-f py-2 px-2" ></i></a>
+<a  class="link text-danger" href=""><i  class="fab fa-twitter py-2 px-2" ></i></a>
+<a  class="link text-danger" href=""><i  class="fab fa-linkedin-in py-2 px-2" ></i></a>
+
+</div></div>
+
+
+<div class="col-12 col-md-4 row teamCard mx-auto">
+
+    <div class="col-4 "><img src="photos/t2.jpg" style="border-radius: 50%;width: 100%;"></div>
+    <div class="col-8  text-start"><h6>Jane Stenton</h6>
+ 
+     <p class="text-warning"> SEO Specialist</p>
+     
+    <p class="p2"> Curious, tech-geeck and gets serious when it comes to work. 
+        Curious, tech-geeck and gets serious when it comes to work. 
+    </p>
+ 
+ <a  class="link text-warning" href=""><i  class="fab fa-facebook-f py-2 px-2" ></i></a>
+ <a  class="link text-warning" href=""><i  class="fab fa-twitter py-2 px-2" ></i></a>
+ <a  class="link text-warning" href=""><i  class="fab fa-linkedin-in py-2 px-2" ></i></a>
+  </div></div>
+ 
+
+
+
+<div class="col-12 col-md-4 row teamCard mx-auto">
+
+    <div class="col-4 "><img src="photos/person1.jpg" style="border-radius: 50%;width: 100%;"></div>
+    <div class="col-8  text-start"><h6>John Smith</h6>
+ 
+     <p class="text-success">Developer</p>
+     
+    <p class="p2"> Enthusiastic, passionate with great sense of humor.</p>
+ 
+ <a  class="link text-success" href=""><i  class="fab fa-facebook-f py-2 px-2" ></i></a>
+ <a  class="link text-success" href=""><i  class="fab fa-twitter py-2 px-2" ></i></a>
+ <a  class="link text-success" href=""><i  class="fab fa-linkedin-in py-2 px-2" ></i></a>
+  </div></div>
+ 
+</div>
+</div>
+</section>
+
+<!--  ---------------------------Contact us----------------------------------------------->
+<section class="contact bg-white">
+
+    <div class="container py-5">
+
+        <div class="row mx-auto contact-row">
+         <h1 class=" fs-2 text-center py-5"style="color:#545454;font-size: 35px;
+          line-height: 34px;font-weight: 700;">Contact us</h1>
+
+        <div class="col-12 col-md-4 row ">
+        
+           <div class="col-2 border-end px-2"><p class="text-warning " style="font-size: 14px;">Address</p></div>
+           <div class="col-10  text-start">
+            <p style="width: 100%;
+            margin: 0 0 10px;
+            color: #8c9597;
+            line-height: 25px;"> Street 221B Baker Street,hhhhhhjg
+                London, UK</p>
+            
+                 
+        </div></div>
+
+
+        <div class="col-12 col-md-4 row  mx-auto ">
+        
+            <div class="col-4 border-end text-nowrap contact-row text-start px-0 "><p class="text-warning contact-row"  style="font-size: 14px;">Customer Support</p></div>
+            <div class="col-8   ">
+             <p class="p2 text-start"> E-mail: <a href="" >contact@site.com</a></p>
+         
+         </div></div>
+
+
+
+         <div class="col-12 col-md-4  contact-row text-end" >
+        
+         
+         <a  class="link  contact-row" href=""><i  class="fab fa-facebook-f py-2 px-1" ></i></a>
+         <a  class="link  contact-row" href=""><i  class="fab fa-twitter py-2 px-1" ></i></a>
+         <a  class="link  contact-row" href=""><i  class="fab fa-linkedin-in py-2 px-1" ></i></a>
+         
+         </div></div>
+
+<!--------------------------------------------------Form------------------------------------------------------------->
+<div class="row py-5">
+
+
+
+    <div class="col-12 col-md-4">
+        <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label float-start py-0">Your Name(required)</label>
+        <input type="email" class="form-control bg-light" id="exampleFormControlInput1" >
+      </div>
+    
+    </div>
+
+    <div class="col-12 col-md-4"> <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label float-start">Email address(required)</label>
+        <input type="email" class="form-control bg-light" id="exampleFormControlInput1" >
+      </div></div>
+
+    <div class="col-12 col-md-4"> <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label float-start">Subject</label>
+        <input type="email" class="form-control bg-light" id="exampleFormControlInput1" >
+      </div></div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label float-start">Example textarea</label>
+        <textarea class="form-control bg-light" id="exampleFormControlTextarea1" rows="8"></textarea>
+      </div>
+
+      </div>
+      <button type="submit" class="btn btn-warning float-end text-white px-5">Send</button>
+
+</div>
+
+
+</section>
+
+<section class="footer1" style="background-color: #292825; ">
+<div class="container py-5">
+
+
+    
+     
+        <div class="row row-cols-4 tableFooter  " >
+          <div class=" col-12 col-md-2  " >
+              <h5 class="text-white text-start">PRODUCTS</h5>
+              
+            <a href="" class="list-group-item  bg-transparent text-nowrap"><i class="fas fa-chevron-right"></i> Our Work</a>
+            <a href="" class="list-group-item  bg-transparent text-nowrap"><i class="fas fa-chevron-right"></i> Clubs</a>
+            <a href="" class="list-group-item  bg-transparent text-nowrap"><i class="fas fa-chevron-right"></i> News</a>
+            <a href="" class="list-group-item  bg-transparent text-nowrap"><i class="fas fa-chevron-right"></i> Announcements</a>
+
+          </div>
+
+
+          <div class="col-12 col-md-2  " >
+              <h5 class="text-white text-start">INFORMATION</h5>
+            <a href="" class="list-group-item  bg-transparent text-nowrap"><i class="fas fa-chevron-right "></i>Pricing</a>
+            <a href="" class="list-group-item  bg-transparent text-nowrap"><i class="fas fa-chevron-right "></i>Terms</a>
+            <a href="" class="list-group-item  bg-transparent text-nowrap"><i class="fas fa-chevron-right "></i>Affiliates</a>
+            <a href="" class="list-group-item  bg-transparent text-nowrap"><i class="fas fa-chevron-right "></i>Blog</a>
+
+
+          </div>
+         
+          <div class="col-12 col-md-2 ">
+              <h5 class="text-white text-start">SUPPORT</h5>
+            <a href="" class="list-group-item  bg-transparent text-nowrap"><i class="fas fa-chevron-right "></i>Documentation</a>
+            <a href="" class="list-group-item  bg-transparent text-nowrap"><i class="fas fa-chevron-right "></i>FAQs</a>
+            <a href="" class="list-group-item  bg-transparent text-nowrap"><i class="fas fa-chevron-right "></i>Forums</a>
+            <a href="" class="list-group-item  bg-transparent text-nowrap"><i class="fas fa-chevron-right "></i>Contact</a>
+
+          </div>
+        </div>
+      </div>
+
+
+
+</section>
+
+<section class="footer2 bg-dark text-white py-2 text-center " style="font-size: 12px;">
+<p>Theme: Illdy. © Copyright 2017. All Rights Reserved.</p>
+</section>
+
+
+
+
+</div> <!------------end java show-page-->
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage,1500);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+</body>
+</html>
